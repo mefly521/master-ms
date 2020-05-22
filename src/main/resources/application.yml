@@ -1,0 +1,37 @@
+server:
+  port: 8089
+spring:
+  datasource:
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      maximum-pool-size: 2
+      minimum-idle: 1
+      pool-name: ExpendHikariCP
+    driverClassName: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://xxx:3306/blog_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=GMT%2B8&characterEncoding=utf8
+    username: root
+    password: xxx
+logging:
+  level:
+    com:
+      demo: debug
+redis:
+  hostName: xxx
+  port: 6379
+  timeout: 30
+  maxIdle : 300
+  maxTotal: 1000
+  maxWaitMillis: 1000
+  minEvictableIdleTimeMillis : 300000
+  numTestsPerEvictionRun : 1024
+  timeBetweenEvictionRunsMillis : 30000
+  testOnBorrow : true
+  testWhileIdle : true
+  password: 123456
+autoRun : 0
+imgPath : D:/temp/00/
